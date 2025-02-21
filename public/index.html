@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Майнинг</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Форма регистрации/входа -->
+    <div id="auth-form" class="form-container">
+      <h2>Регистрация / Вход</h2>
+      <input type="text" id="username" placeholder="Логин" required>
+      <input type="password" id="password" placeholder="Пароль" required>
+      <button onclick="login()">Войти</button>
+      <button onclick="register()">Зарегистрироваться</button>
+    </div>
+
+    <!-- Панель майнинга -->
+    <div id="mining-panel" class="hidden">
+      <h2>Майнинг Биткоина</h2>
+      <button id="start-btn" onclick="startMining()">Начать майнинг</button>
+      <button id="stop-btn" onclick="stopMining()" disabled>Остановить майнинг</button>
+      <p>Статус: <span id="status">Не активен</span></p>
+      <p>Хешрейт: <span id="hashrate">0 H/s</span></p>
+      <p>Баланс: <span id="balance">0 BTC</span></p>
+      <p>Общий хешрейт: <span id="total-hashrate">0 H/s</span></p>
+      <input type="text" id="wallet-address" placeholder="Введите адрес кошелька">
+      <button onclick="withdraw()">Вывести средства</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
